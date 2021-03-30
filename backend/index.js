@@ -42,4 +42,4 @@ userDataController(app);
 db.initalise().then(console.log).catch(console.log);
 
 //Port Working
-app.listen(process.env.PORT,()=>console.log("Server is Running...."));
+app.listen(3007,()=>console.log("Server is Running...."));

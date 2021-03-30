@@ -1,7 +1,9 @@
 const jwt = require("jsonwebtoken");
 
+KEY="kdfkdjfkdfklsdjjfds"
+
 function generateToken(payload) {
-    return jwt.sign(payload, process.env.KEY);
+    return jwt.sign(payload, KEY);
   }
 
   function filterUser(user) {

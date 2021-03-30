@@ -29,7 +29,7 @@ app.post("/singup",async function (request,response){
         phone,
     })
     createUser.save();
-    response.json(createUser);
+    response.json("done");
 })
 }
 

@@ -36,7 +36,7 @@ const initalise = async function(){
         await dbs.sync({alter:true});
     }
     catch(e){
-        console.log("Here is the Error",error);
+        console.log("Here is the Error",e);
     }
 }
 
