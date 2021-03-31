@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const db = require("./DB/db");
 const { singUpTable } = require("./DB/db");
+const {LogInController} = require('./Controller/LoginController')
 const {singUpController} = require('./Controller/SingUpController')
 const {userDataController} = require('./Controller/userData')
 const passport = require("passport");
@@ -35,6 +36,7 @@ app.use(passport.initialize());
 
 
 //Controller
+LogInController(app);
 singUpController(app);
 userDataController(app);
 
@@ -42,4 +44,4 @@ userDataController(app);
 db.initalise().then(console.log).catch(console.log);
 
 //Port Working
-app.listen(3007,()=>console.log("Server is Running...."));
+app.listen(3008,()=>console.log("Server is Running...."));
